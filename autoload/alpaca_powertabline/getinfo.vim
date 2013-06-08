@@ -47,7 +47,7 @@ endfunction"}}}
 function! alpaca_powertabline#getinfo#tabpage_label(n, title, modified) "{{{
   " label
   let label = ""
-  let label .= a:n . g:alpaca_powertabline_sep2
+  " let label .= a:n . g:alpaca_powertabline_sep2
   let label .= a:title
   let mod   = a:modified ? ' + ' : ''
   let label .= mod

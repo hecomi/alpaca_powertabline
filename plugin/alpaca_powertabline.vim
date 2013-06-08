@@ -41,21 +41,23 @@ function! s:define_default_variable(name, value) "{{{
   endif
 endfunction "}}}
 
+let s:dividers = g:Pl#Parser#Symbols[g:Powerline_symbols].dividers
+let s:divider  = nr2char(get(s:dividers[0], 0, 0))
 call s:define_default_variable('g:alpaca_powertabline_time_format', "%H:%M:%S")
-call s:define_default_variable('g:alpaca_powertabline_sep1', ' ')
-call s:define_default_variable('g:alpaca_powertabline_sep2', '  ')
+call s:define_default_variable('g:alpaca_powertabline_sep1', s:divider)
+call s:define_default_variable('g:alpaca_powertabline_sep2', ':')
 call s:define_default_variable('g:alpaca_powertabline_colors', {
         \   "base" : {
         \     "bg" : 240,
         \     "fg" : 255,
         \   },
         \   "sel" : {
-        \     "bg": 75,
+        \     "bg": 24,
         \     "fg": 255,
         \   },
         \   "passive": {
-        \     "bg": 236,
-        \     "fg": 245,
+        \     "bg": 234,
+        \     "fg": 236,
         \   },
         \ })
 "}}}

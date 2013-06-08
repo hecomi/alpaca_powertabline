@@ -38,22 +38,22 @@ function! alpaca_powertabline#create_tabline() "{{{
   let tabs = join(titles, s:sep) . '%#TabLineFill#%T'
 
   " XXX 他の人用にとりあえず
-  " return ' ' . tabs
+  return ' ' . tabs
 
   " let info = s:get_info()
 
   " 中央寄せ
-  let space_len = (&columns / 2) - (titles_len / 2)
-  let space_len = space_len > 0 ? space_len : 1
-
-  let first = "%#TabLineFill#"
-  for i in range(1, space_len)
-    let first .= " "
-  endfor
-  let fill_space   = alpaca_powertabline#utils#label2powerline(first, 0)
-  return fill_space . tabs
-
-  return fill_space . tabs . '%=' . info
+  " let space_len = (&columns / 2) - (titles_len / 2)
+  " let space_len = space_len > 0 ? space_len : 1
+		"
+  " let first = "%#TabLineFill#"
+  " for i in range(1, space_len)
+  "   let first .= " "
+  " endfor
+  " let fill_space   = alpaca_powertabline#utils#label2powerline(first, 0)
+  " return fill_space . tabs
+		"
+  " return fill_space . tabs . '%=' . info
 endfunction"}}}
 
 " Generating powerline highlight
