@@ -38,7 +38,7 @@ function! alpaca_powertabline#create_tabline() "{{{
   let tabs = join(titles, s:sep) . '%#TabLineFill#%T'
 
   " XXX 他の人用にとりあえず
-  return ' ' . tabs
+  return tabs
 
   " let info = s:get_info()
 

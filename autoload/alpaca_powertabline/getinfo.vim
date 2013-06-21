@@ -64,5 +64,5 @@ function! alpaca_powertabline#getinfo#buffer_into_tab(tabbufnr) "{{{
   let bufname = alpaca_powertabline#getinfo#buffer_name(curbufnr)
   let mod = len(filter(bufnrs, 'getbufvar(v:val, "&modified")')) > 0
 
-  return [a:tabbufnr, bufname, mod]
+  return [a:tabbufnr, ' '.bufname.' ', mod]
 endfunction"}}}
